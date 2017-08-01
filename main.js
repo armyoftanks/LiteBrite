@@ -1,7 +1,6 @@
 
 
 $(document).ready(function() {
-  alert($(window).height());
 
   for(i=0; i*2<$(window).height(); i++){
     $("body").append('<div class="row"></div>');
