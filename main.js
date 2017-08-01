@@ -2,9 +2,12 @@
 
 $(document).ready(function() {
 
-  for(i=0; i*2<$(window).height(); i++){
+  var $deviceHeight = $(window).height();
+  var $deviceWidth = $(window).width();
+
+  for(i=0; i<$deviceHeight; i++){
     $("body").append('<div class="row"></div>');
-    for(i=0; i*2<$(window).width(); i++){
+    for(i=0; i<$deviceWidth; i++){
       $("body").append('<div class="box"></div>');
     }
   }
