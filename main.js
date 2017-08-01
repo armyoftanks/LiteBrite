@@ -1,4 +1,15 @@
+
+
 $(document).ready(function() {
+  alert($(window).height());
+
+  for(i=0; i*2<$(window).height(); i++){
+    $("body").append('<div class="row"></div>');
+    for(i=0; i*2<$(window).width(); i++){
+      $("body").append('<div class="box"></div>');
+    }
+  }
+
 
   var colorClass = '';
 
@@ -20,6 +31,7 @@ $(document).ready(function() {
     $(this).removeClass('not-selected');
     $(this).siblings().addClass('not-selected');
   });
+
 
   $('.box').click(function() {
     $(this).toggleClass(colorClass);
